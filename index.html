@@ -7,7 +7,7 @@
 <title>SITE-81 MAP</title>
 <link href="styles.css" rel="stylesheet"/>
 </head>
-<body>
+<body><div class="sidebar-overlay" id="sidebarOverlay"></div>
 <header class="topbar">
 <div class="brand">
         ◈ <span>SITE-81</span> MAP
@@ -21,18 +21,18 @@
                 SARDO
             </div>
 <div class="profile-id">
-                SITE-81 // MAP CREATOR
+                888 // OPERATOR
             </div>
 </div>
 <div class="profile-status"></div>
 </div>
-</header>
+<button class="menu-toggle" id="menuToggle">☰</button></header>
 <div class="app">
 <aside class="sidebar">
 <div class="sidebar-title">
             MAP SECTIONS
         </div>
-<div class="zone-list" id="zoneList"></div>
+<div class="zone-list" id="zoneList"><div class="zone-item home-tab" id="homeTab"><div class="zone-name">🏠 HOME</div><div class="zone-count">INFO</div></div></div>
 </aside>
 <main class="main">
 <div class="toolbar">
@@ -130,5 +130,26 @@
 ========================= -->
 
 <script src="app.js"></script>
-</body>
+<div class="home-panel" id="homePanel">
+<div class="home-card">
+<div class="home-badge">SITE-81</div>
+<h1 class="home-title">SITE-81 INTERACTIVE MAP</h1>
+<p class="home-text">An interactive overview of Site-81, including keycards, SCPs, items, doors, medical supplies and other important locations.</p>
+<div class="home-grid">
+<div class="home-stat"><span>7</span>MAP SECTIONS</div>
+<div class="home-stat"><span>101</span>MARKERS</div>
+<div class="home-stat"><span>7</span>CATEGORIES</div>
+</div>
+<div class="home-section">
+<h2>HOW TO USE</h2>
+<p>Choose a map section on the left. Use the search box or category filter to find markers. Click a marker to see its information. Use + and − to zoom.</p>
+</div>
+<div class="home-section">
+<h2>CREDITS</h2>
+<p><strong>Map created by SARDO</strong><br/>Interactive map design and marker collection by SARDO.</p>
+<p class="home-small">Site-81 and its original content belong to their respective creators. This is an unofficial fan-made map.</p>
+</div>
+<button class="tool-btn primary" id="homeCloseBtn">OPEN MAP</button>
+</div>
+</div></body>
 </html>

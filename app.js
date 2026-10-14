@@ -692,3 +692,14 @@ async function initialize() {
     }
 }
 initialize();
+
+
+/* ===== HOME PANEL ===== */
+const homePanel=document.getElementById('homePanel');
+const homeTab=document.getElementById('homeTab');
+document.getElementById('homeCloseBtn').addEventListener('click',()=>homePanel.classList.add('hidden'));
+homeTab.addEventListener('click',()=>{homePanel.classList.remove('hidden');document.body.classList.remove('sidebar-open');});
+
+/* ===== MOBILE MENU ===== */
+document.getElementById('menuToggle').addEventListener('click',()=>document.body.classList.toggle('sidebar-open'));
+document.getElementById('sidebarOverlay').addEventListener('click',()=>document.body.classList.remove('sidebar-open'));
