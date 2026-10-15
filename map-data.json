@@ -419,9 +419,9 @@
         "id": "mv63qsiqli1s42avsxj",
         "name": "L3",
         "type": "keycard",
-        "notes": "Requires ???",
-        "x": 24.352589641434264,
-        "y": 59.44180522565321
+        "notes": "Requires ??? + P90",
+        "x": 24.692141634102793,
+        "y": 60.526884701308106
       },
       {
         "id": "mv63rsoeq7bswl4rez",
@@ -454,62 +454,6 @@
         "notes": "",
         "x": 46.513943354650586,
         "y": 25.48353947903853
-      },
-      {
-        "id": "mv8gow2zn5uqztj1npb",
-        "name": "L3",
-        "type": "keycard",
-        "notes": "",
-        "x": 17.442729843565193,
-        "y": 39.08848252828784
-      },
-      {
-        "id": "mv8gp0rb4tfrjeil6p9",
-        "name": "Gun",
-        "type": "item",
-        "notes": "",
-        "x": 17.691733827628937,
-        "y": 42.65142789645886
-      },
-      {
-        "id": "mv8gs8ss7006h9q7dxf",
-        "name": "2x P90, Gun, Medkit",
-        "type": "item",
-        "notes": "",
-        "x": 24.551792828685258,
-        "y": 62.05463182897862
-      },
-      {
-        "id": "mv8gxy2b7n1itthfhdd",
-        "name": "L2",
-        "type": "keycard",
-        "notes": "",
-        "x": 44.97011952191235,
-        "y": 32.957244655581945
-      },
-      {
-        "id": "mv8gzagxqxunanyqsj",
-        "name": "L2",
-        "type": "keycard",
-        "notes": "",
-        "x": 50.24900398406375,
-        "y": 43.28978622327791
-      },
-      {
-        "id": "mv8h0mebz8d1pv7oq",
-        "name": "L2",
-        "type": "keycard",
-        "notes": "",
-        "x": 50.547808764940235,
-        "y": 45.54631828978623
-      },
-      {
-        "id": "mv8h0xci2qjj8mtiqdb",
-        "name": "L2",
-        "type": "keycard",
-        "notes": "",
-        "x": 52.6394422310757,
-        "y": 43.17102137767221
       }
     ]
   },
