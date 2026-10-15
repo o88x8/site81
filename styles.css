@@ -762,3 +762,12 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: #354e5b;
 }
+
+.profile-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-card:hover {
+    text-decoration: none;
+}
