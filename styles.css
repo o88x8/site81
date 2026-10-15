@@ -763,11 +763,14 @@ button {
     background: #354e5b;
 }
 
-.profile-card {
-    text-decoration: none;
-    color: inherit;
-}
-
-.profile-card:hover {
-    text-decoration: none;
-}
+/* ===== PROFILE LINK ===== */
+.profile-card{text-decoration:none;color:inherit}
+.profile-card:hover{text-decoration:none}
+/* ===== FILTERS ===== */
+.filter-box{position:relative}
+.filter-menu{display:none;position:absolute;top:calc(100% + 7px);right:0;min-width:190px;background:#0d161b;border:1px solid #2c3e47;border-radius:8px;padding:8px;z-index:900;box-shadow:0 18px 45px rgba(0,0,0,.55)}
+.filter-menu.show{display:block}
+.filter-menu label{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:5px;color:#c3d3da;font-size:12px;cursor:pointer}
+.filter-menu label:hover{background:#15212a}
+.filter-menu input{accent-color:#70dcff;width:15px;height:15px}
+.marker.camera{color:#7ee0ff}

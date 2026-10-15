@@ -16,6 +16,8 @@ const icons = {
 
     door: "🚪",
 
+    camera: "📷",
+
     other: "⚙️"
 
 };
@@ -39,6 +41,9 @@ const typeNames = {
     door:
         "DOOR",
 
+    camera:
+        "CAMERA",
+
     other:
         "OTHER"
 
@@ -53,9 +58,9 @@ let state = {
 
     currentZone: null,
 
-    editMode: false,
+    editMode: true,
 
-    filter: "all",
+    filters: new Set(["scp","grabbable-scp","keycard","item","medical","door","camera","other"]),
 
     search: "",
 
@@ -167,10 +172,7 @@ const searchInput =
         "searchInput"
     );
 
-const filterSelect =
-    document.getElementById(
-        "filterSelect"
-    );
+
 
 
 
@@ -350,9 +352,7 @@ function renderMarkers() {
         markerData => {
 
             if (
-                filter !== "all" &&
-                markerData.type !==
-                filter
+                !allowed.has(markerData.type)
             ) {
 
                 return;
@@ -532,19 +532,17 @@ function hideTooltip() {
 
 
 
-
-filterSelect.addEventListener(
-    "change",
-    event => {
-
-        state.filter =
-            event.target.value;
-
-        renderMarkers();
-
-    }
-);
-
+/* ===== MULTI FILTER ===== */
+const filterToggle=document.getElementById('filterToggle');
+const filterMenu=document.getElementById('filterMenu');
+document.querySelectorAll('.filter-check').forEach(box=>{
+ box.addEventListener('change',()=>{
+  if(box.checked) state.filters.add(box.value); else state.filters.delete(box.value);
+  renderMarkers();
+ });
+});
+filterToggle.addEventListener('click',e=>{e.stopPropagation();filterMenu.classList.toggle('show');});
+document.addEventListener('click',e=>{if(!e.target.closest('#filterBox'))filterMenu.classList.remove('show');});
 
 
 
@@ -692,3 +690,16 @@ async function initialize() {
     }
 }
 initialize();
+
+
+/* ===== MULTI FILTER ===== */
+const filterToggle=document.getElementById('filterToggle');
+const filterMenu=document.getElementById('filterMenu');
+document.querySelectorAll('.filter-check').forEach(box=>{
+ box.addEventListener('change',()=>{
+  if(box.checked) state.filters.add(box.value); else state.filters.delete(box.value);
+  renderMarkers();
+ });
+});
+filterToggle.addEventListener('click',e=>{e.stopPropagation();filterMenu.classList.toggle('show');});
+document.addEventListener('click',e=>{if(!e.target.closest('#filterBox'))filterMenu.classList.remove('show');});
