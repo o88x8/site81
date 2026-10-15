@@ -5,15 +5,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SITE-81 MAP</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="styles.css">
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
 <div class="brand">
         ◈ <span>SITE-81</span> MAP
     </div>
-<a class="profile-card" href="https://discord.com/users/729216326895140904" rel="noopener" target="_blank">
+<div class="profile-card">
 <div class="profile-avatar">
             88
         </div>
@@ -26,7 +25,7 @@
             </div>
 </div>
 <div class="profile-status"></div>
-</a>
+</div>
 </header>
 <div class="app">
 <aside class="sidebar">
@@ -42,19 +41,28 @@
 <span id="saveStatus" role="status" style="font-size:11px;white-space:nowrap;color:#70dcff">Loading…</span>
 <div class="toolbar-spacer"></div>
 <input class="search-box" id="searchInput" placeholder="Search markers..." type="text"/>
-<div class="filter-box" id="filterBox">
-<button class="tool-btn" id="filterToggle">Filters ▾</button>
-<div class="filter-menu" id="filterMenu">
-<label><input checked="" class="filter-check" type="checkbox" value="scp"/> SCPs</label>
-<label><input checked="" class="filter-check" type="checkbox" value="grabbable-scp"/> Grabbable SCPs</label>
-<label><input checked="" class="filter-check" type="checkbox" value="keycard"/> Keycards</label>
-<label><input checked="" class="filter-check" type="checkbox" value="item"/> Items</label>
-<label><input checked="" class="filter-check" type="checkbox" value="medical"/> Medical</label>
-<label><input checked="" class="filter-check" type="checkbox" value="door"/> Doors</label>
-<label><input checked="" class="filter-check" type="checkbox" value="camera"/> Cameras</label>
-<label><input checked="" class="filter-check" type="checkbox" value="other"/> Other</label>
-</div>
-</div>
+<select class="filter-select" id="filterSelect">
+<option value="all">All</option>
+<option value="scp">SCPs</option>
+<option value="grabbable-scp">
+                    Grabbable SCPs
+                </option>
+<option value="keycard">
+                    Keycards
+                </option>
+<option value="item">
+                    Items
+                </option>
+<option value="medical">
+                    Medical
+                </option>
+<option value="door">
+                    Doors
+                </option>
+<option value="other">
+                    Other
+                </option>
+</select>
 
 </div>
 <div class="map-container" id="mapContainer">
